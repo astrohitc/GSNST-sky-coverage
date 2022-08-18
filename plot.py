@@ -21,8 +21,8 @@ def plot():
     dec = Angle(d1['DEC'], unit=u.deg)
 
     fig = plt.figure(figsize=(10,10))
-    ax = fig.add_subplot(111, projection="mollweide")
-    ax.scatter(ra.radian, dec.radian)
+    ax = fig.add_subplot(111, projection="aitoff")
+    ax.scatter(ra.degree, dec.degree)
     ax.set_xticklabels(['14h','16h','18h','20h','22h','0h','2h','4h','6h','8h','10h'])
     ax.grid(True)
     plt.title('GSNST discoveries')
